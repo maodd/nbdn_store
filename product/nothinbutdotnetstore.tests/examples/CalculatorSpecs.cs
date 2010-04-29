@@ -89,6 +89,8 @@ namespace nothinbutdotnetstore.tests.examples
 //                change
                 the_connection = the_dependency<IDbConnection>();
                 command = an<IDbCommand>();
+
+                the_connection.Stub(x => x.CreateCommand()).Return(command);
             };
 
 
