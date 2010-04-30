@@ -13,8 +13,12 @@ Inherits="System.Web.UI.Page" MasterPageFile="Store.master" %>
  %> 
         	<tr class="ListItem">
                		 <td>                     
-                      <a href="SubDepartment.store?<%=PayloadKeys.department.name %>=<%= department.name %>"><%= department.name %></a>
-                	</td>
+                      <a href="ViewSubDepartmentsInDepartment.store?<%=PayloadKeys.department.name %>=<%= department.name %>"><%= department.name %></a>
+                 	</td>
+                 	<td>
+                 	                     <a href="ViewProductsInDepartment.store?<%=PayloadKeys.department.name %>=<%= department.name %>">View Prodcuts</a>
+
+                 	</td>
            	 </tr>        
            	 <%
 } %>

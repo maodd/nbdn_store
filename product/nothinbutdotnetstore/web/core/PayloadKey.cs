@@ -24,7 +24,11 @@ namespace nothinbutdotnetstore.web.core
 
         public KeyValue map_from(NameValueCollection collection)
         {
+            if (collection[key_name] == null) return default(KeyValue);
+
             return (KeyValue) Convert.ChangeType(collection[key_name], typeof (KeyValue));
+             
+            
         }
     }
 }

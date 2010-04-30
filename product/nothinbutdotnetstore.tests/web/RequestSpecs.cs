@@ -30,6 +30,7 @@ namespace nothinbutdotnetstore.tests.web
                 mapper_registry.Stub(registry => registry.get_mapper_for<NameValueCollection, SomeRandomInputModel>()).Return(mapper);
 
                 provide_a_basic_sut_constructor_argument(request_data);
+                provide_a_basic_sut_constructor_argument(request_url);
             };
 
             because b = () =>
@@ -48,6 +49,7 @@ namespace nothinbutdotnetstore.tests.web
             static Mapper<NameValueCollection, SomeRandomInputModel> mapper;
             static NameValueCollection request_data;
             static MapperRegistry mapper_registry;
+            static string request_url;
         }
     }
 

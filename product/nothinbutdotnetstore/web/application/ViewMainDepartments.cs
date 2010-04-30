@@ -2,7 +2,7 @@ using System;
 using nothinbutdotnetstore.tasks;
 using nothinbutdotnetstore.tasks.stubs;
 using nothinbutdotnetstore.web.core;
-using nothinbutdotnetstore.web.core.stubs;
+ 
 
 namespace nothinbutdotnetstore.web.application
 {
@@ -11,7 +11,7 @@ namespace nothinbutdotnetstore.web.application
         CatalogTasks catalog_tasks;
         ResponseEngine response_engine;
 
-        public ViewMainDepartments():this(new StubCatalogTasks(),new StubResponseEngine())
+        public ViewMainDepartments():this(new StubCatalogTasks(),new DepartmentResponseEngine())
         {
         }
 
@@ -23,7 +23,6 @@ namespace nothinbutdotnetstore.web.application
 
         public void process(Request request)
         {
-
             response_engine.display(catalog_tasks.get_all_main_departments());
         }
     }

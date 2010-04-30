@@ -40,7 +40,7 @@ namespace nothinbutdotnetstore.tests.web
             };
 
 
-            it should_display_only_the_main_departments_in_the_store = () =>
+            it should_display_only_the_sub_departments_in_the_department = () =>
             {
                 response_engine.received(x => x.display(sub_departments));
             };

@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using nothinbutdotnetstore.web.application;
-using nothinbutdotnetstore.web.core.stubs;
+
+ 
 
 namespace nothinbutdotnetstore.web.core
 {
@@ -15,14 +15,7 @@ namespace nothinbutdotnetstore.web.core
             this.all_commands = all_commands;
         }
 
-        public DefaultCommandRegistry():this(build_fake_set_of_commands())
-        {
-        }
-
-        static IEnumerable<RequestCommand> build_fake_set_of_commands()
-        {
-            yield break;
-        }
+        
 
         public RequestCommand get_command_that_can_handle(Request request)
         {

@@ -4,9 +4,7 @@ namespace nothinbutdotnetstore.web.core
     {
         CommandRegistry command_registry;
 
-        public DefaultFrontController():this(new DefaultCommandRegistry())
-        {
-        }
+ 
 
         public DefaultFrontController(CommandRegistry command_registry)
         {
